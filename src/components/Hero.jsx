@@ -79,7 +79,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="hidden lg:flex flex-col gap-6 max-w-[340px] justify-self-end"
+          className="flex flex-col gap-6 max-w-[280px] sm:max-w-[340px] mx-auto lg:mx-0 lg:justify-self-end mt-4 lg:mt-0"
         >
           <div className="relative">
             <div
