@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-bg: #06080f;
+  --color-surface: #0e131f;
+  --color-surface-hover: #141a29;
+  --color-border: rgba(255, 255, 255, 0.09);
+  --color-border-strong: rgba(255, 255, 255, 0.22);
+  --color-text: #eef1f7;
+  --color-text-secondary: #98a0b5;
+  --color-text-tertiary: #5c6478;
+
+  --color-accent: #22d3ee;
+  --color-accent-hover: #67e8f9;
+  --color-accent-soft: rgba(34, 211, 238, 0.1);
+  --color-accent-2: #6366f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #05070c;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-tertiary);
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 7rem 0;
+}
+
+.grid > * {
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 5rem 0;
+  }
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Technical corner-bracket frame, drawn with layered gradients (no extra markup) */
+.corner-marks {
+  position: relative;
+  background-image:
+    linear-gradient(to right, var(--corner-color, var(--color-border-strong)) 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, var(--corner-color, var(--color-border-strong)) 1.5px, transparent 1.5px),
+    linear-gradient(to left, var(--corner-color, var(--color-border-strong)) 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, var(--corner-color, var(--color-border-strong)) 1.5px, transparent 1.5px),
+    linear-gradient(to right, var(--corner-color, var(--color-border-strong)) 1.5px, transparent 1.5px),
+    linear-gradient(to top, var(--corner-color, var(--color-border-strong)) 1.5px, transparent 1.5px),
+    linear-gradient(to left, var(--corner-color, var(--color-border-strong)) 1.5px, transparent 1.5px),
+    linear-gradient(to top, var(--corner-color, var(--color-border-strong)) 1.5px, transparent 1.5px);
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-position:
+    top left, top left,
+    top right, top right,
+    bottom right, bottom right,
+    bottom left, bottom left;
+}
+
+.ruler-line {
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--color-border-strong) 0,
+    var(--color-border-strong) 1px,
+    transparent 1px,
+    transparent 6px
+  );
+  height: 1px;
+}
+
+.card-glow {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card-glow:hover {
+  border-color: color-mix(in srgb, var(--card-accent, var(--color-accent)) 55%, transparent);
+  background-color: var(--color-surface-hover);
+  box-shadow: 0 20px 44px -18px color-mix(in srgb, var(--card-accent, var(--color-accent)) 45%, transparent);
+}
+
+.gradient-text {
+  background: linear-gradient(100deg, var(--color-accent) 15%, var(--color-accent-2) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-fill {
+  background: linear-gradient(100deg, var(--color-accent), var(--color-accent-2));
+  background-size: 160% 100%;
+  background-position: 0% 0%;
+  transition: background-position 0.4s ease;
+}
+
+.gradient-fill:hover {
+  background-position: 100% 0%;
+}
