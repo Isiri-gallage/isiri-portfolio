@@ -1,6 +1,6 @@
 export const profile = {
   name: "Isiri Gallage",
-  role: "Full-Stack Developer",
+  role: "Software Engineer",
   tagline: "IT undergraduate at the University of Moratuwa who enjoys building end-to-end systems, from backend architecture to AI-integrated functionality.",
   location: "Colombo, Sri Lanka",
   email: "isirigallage2002@gmail.com",
