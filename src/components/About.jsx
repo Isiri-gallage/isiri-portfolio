@@ -10,7 +10,7 @@ const facts = [
 
 const About = () => {
   return (
-    <section id="about" className="section container">
+    <section id="about" className="section page-container">
       <SectionHeading title="About Me" />
 
       <div className="grid md:grid-cols-3 gap-10">

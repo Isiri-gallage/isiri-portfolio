@@ -3,7 +3,7 @@ import { Reveal, SectionHeading, Card } from "./ui";
 
 const Skills = () => {
   return (
-    <section id="skills" className="section container">
+    <section id="skills" className="section page-container">
       <SectionHeading title="Technical Skills" />
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

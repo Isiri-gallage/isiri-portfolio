@@ -9,7 +9,7 @@ const Projects = () => {
   const [active, setActive] = useState(null);
 
   return (
-    <section id="projects" className="section container">
+    <section id="projects" className="section page-container">
       <SectionHeading title="Projects" />
 
       <div className="grid md:grid-cols-2 gap-6">

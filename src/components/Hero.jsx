@@ -18,7 +18,7 @@ const callouts = [
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center container pt-28 pb-16 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center page-container pt-28 pb-16 overflow-hidden">
       <span className="hidden lg:block absolute top-28 right-6 mono text-[11px] text-text-tertiary tracking-widest [writing-mode:vertical-rl]">
         PORTFOLIO / REV.2026
       </span>

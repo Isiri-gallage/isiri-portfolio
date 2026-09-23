@@ -64,7 +64,7 @@ h1, h2, h3, h4 {
   background: var(--color-text-tertiary);
 }
 
-.container {
+.page-container {
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
@@ -72,7 +72,8 @@ h1, h2, h3, h4 {
 }
 
 .section {
-  padding: 7rem 0;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
 .grid > * {
@@ -81,7 +82,8 @@ h1, h2, h3, h4 {
 
 @media (max-width: 640px) {
   .section {
-    padding: 5rem 0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 

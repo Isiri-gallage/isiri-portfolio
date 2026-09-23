@@ -47,7 +47,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section container">
+    <section id="contact" className="section page-container">
       <SectionHeading title="Get In Touch" />
 
       <div className="grid md:grid-cols-5 gap-10 items-start">

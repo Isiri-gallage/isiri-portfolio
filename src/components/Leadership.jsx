@@ -4,7 +4,7 @@ import { Reveal, SectionHeading, Card } from "./ui";
 
 const Leadership = () => {
   return (
-    <section id="leadership" className="section container">
+    <section id="leadership" className="section page-container">
       <SectionHeading title="Leadership" />
 
       <div className="grid sm:grid-cols-2 gap-5">

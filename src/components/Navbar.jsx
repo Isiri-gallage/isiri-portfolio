@@ -19,7 +19,7 @@ const Navbar = () => {
         scrolled ? "bg-bg/80 backdrop-blur-md border-b border-border" : "border-b border-transparent"
       }`}
     >
-      <nav className="container flex items-center justify-between h-18 py-4">
+      <nav className="page-container flex items-center justify-between h-18 py-4">
         <a href="#home" className="mono text-lg font-semibold text-text">
           isiri<span className="gradient-text">.</span>gallage
         </a>
@@ -65,7 +65,7 @@ const Navbar = () => {
 
       {open && (
         <div className="md:hidden border-t border-border bg-bg">
-          <div className="container flex flex-col py-4 gap-4">
+          <div className="page-container flex flex-col py-4 gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}

@@ -4,7 +4,7 @@ import { profile, navLinks } from "../data/content";
 
 const Footer = () => (
   <footer className="border-t border-border mt-20">
-    <div className="container py-16">
+    <div className="page-container py-16">
       <div className="grid sm:grid-cols-3 gap-10 pb-12">
         <div>
           <a href="#home" className="mono text-lg font-semibold text-text">

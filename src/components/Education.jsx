@@ -4,7 +4,7 @@ import { Reveal, SectionHeading, Card } from "./ui";
 
 const Education = () => {
   return (
-    <section id="education" className="section container">
+    <section id="education" className="section page-container">
       <SectionHeading title="Education" />
 
       <div className="flex flex-col gap-5">
